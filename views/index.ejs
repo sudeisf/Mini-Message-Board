@@ -9,11 +9,12 @@
 
    
         <ul>
-            <% messages.forEach(message => { %>
+            <% messages.forEach((message ,index) => { %>
                 <li>
                     <p>User : <%= message.user %></p>
                     <h3> message: <%= message.text %></h3>
                     <p>recived :<%= message.added %></p>
+                    <a href="/message/<%= index %>">Open</a>
                 </li>
              <% }); %>
 

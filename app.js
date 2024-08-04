@@ -28,6 +28,17 @@ app.get('/new', (req, res) => {
     res.render('form');
 });
 
+// Assuming messages are indexed by a unique id or position
+app.get('/message/:id', (req, res) => {
+    const messageId = parseInt(req.params.id, 10);
+    const message = messages[messageId];
+    if (message) {
+        res.render('message', { message });
+    } else {
+        res.status(404).send('Message not found');
+    }
+});
+
 app.post('/new', (req, res) => {
     const { author, messageText } = req.body;
     messages.push({ text: messageText, user: author, added: new Date() });
