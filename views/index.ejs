@@ -9,14 +9,14 @@
 
    
         <ul>
-            <% messages.forEach((message ,index) => { %>
+            <% data.map((message ,index) => { %>
                 <li>
-                    <p>User : <%= message.user %></p>
-                    <h3> message: <%= message.text %></h3>
-                    <p>recived :<%= message.added %></p>
-                    <a href="/message/<%= index %>">Open</a>
+                    <p>User <%= index %> : <%= message.user_name %></p>
+                    <h3> message: <%= message.message_text %></h3>
+                    <p>recived :<%= message.recived %></p>
+                    <a href="/message/message/<%= message.id %>">Open</a>
                 </li>
-             <% }); %>
+                <% }) %>
 
         </ul>
     

@@ -5,9 +5,9 @@
 </head>
 <body>
     <h1>Message Details</h1>
-    <p><strong>User:</strong> <%= message.user %></p>
-    <p><strong>Message:</strong> <%= message.text %></p>
-    <p><strong>Added on:</strong> <%= message.added.toDateString() %></p>
-    <a href="/">Back to Home</a>
+    <p><strong>User:</strong> <%= row.user_name %></p>
+    <p><strong>Message:</strong> <%= row.message_text %></p>
+    <p><strong>Added on:</strong> <%= row.recived %></p>
+    <a href="/message/">Back to Home</a>
 </body>
 </html>
